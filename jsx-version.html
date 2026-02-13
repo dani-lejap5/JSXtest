@@ -8,6 +8,9 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="root"></div>
@@ -57,9 +60,13 @@
                 title: 'Hobby',
                 price: 'Free',
                 includesText: 'Includes:',
-                features: ['No credit card required', 'Limited Agent requests', 'Limited Tab completions'],
+                features: [
+                    'No credit card required', 
+                'Limited Agent requests', 
+                'Limited Tab completions'
+            ],
                 buttonText: 'Download',
-                buttonVariant: 'secondary',
+                buttonVariant: 'tertiary',
             };
             const proPlan = {
                 title: 'Pro',
@@ -72,18 +79,31 @@
                     'Maximum context windows',
                 ],
                 buttonText: 'Get Pro',
+                buttonVariant: 'secondary',
+            };
+            const enterprisePlan = {    
+                title: 'Enterprise',
+                price: '$50/mo.',
+                includesText: 'Everything in Pro, plus:',
+                features: [
+                    'Unlimited Agent requests',
+                    'Unlimited Tab completions',
+                    'Background Agents',
+                    'Maximum context windows',
+                ],
+                buttonText: 'Talk to sales',
                 buttonVariant: 'primary',
             };
-
             return (
                 // <> is a React Fragment - it groups elements without adding extra HTML divs
                 <>
                     <p className="page-label"><strong>JSX version</strong> — same UI, built with components</p>
                     <div className="cards-container">
-                        {/* The spread operator {...hobbyPlan} passes all object properties as individual props */}
-                        {/* This is the same as writing: title="Hobby" price="Free" includesText="Includes:" etc. */}
-                        <PricingCard {...hobbyPlan} />
-                        <PricingCard {...proPlan} />
+                    {/* The spread operator {...hobbyPlan} passes all object properties as individual props */}
+                    {/* This is the same as writing: title="Hobby" price="Free" includesText="Includes:" etc. */}
+                    <PricingCard {...hobbyPlan} />
+                    <PricingCard {...proPlan} />    
+                    <PricingCard {...enterprisePlan} />
                     </div>
                 </>
             );
