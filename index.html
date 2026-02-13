@@ -1,25 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Page setup and font loading -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab title -->
     <title>Pricing Plans — HTML version</title>
+
+    <!-- Performance hint: connect early to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Inter font family for all text -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main stylesheet for layout and visual styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Small fixed label at the top that explains this is the static HTML version -->
     <p class="page-label"><strong>HTML version</strong> — static markup</p>
+
+    <!-- Flex container holding all pricing cards in a row -->
     <div class="cards-container">
+
+        <!-- Hobby plan card (left card) -->
         <div class="card">
+            <!-- Top section of the card: title, price, and feature list -->
             <div class="card-top">
+                <!-- Plan name -->
                 <h3 class="card-title">Hobby</h3>
+
+                <!-- Price row (for this plan it shows "Free") -->
                 <p class="card-price">
                     <span class="card-price-amount">Free</span>
                 </p>
+
+                <!-- Content area describing what is included in this plan -->
                 <div class="card-content">
+                    <!-- Section label above the feature list -->
                     <p class="includes-text">Includes:</p>
+
+                    <!-- Feature list: each line is one benefit with a checkmark -->
                     <ul class="features-list">
                         <li>
                             <span class="checkmark">✓</span>
@@ -36,17 +59,30 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- Call-to-action button for downloading the free plan -->
             <button class="download-button secondary">Download</button>
         </div>
+
+        <!-- Pro plan card (middle card) -->
         <div class="card">
+            <!-- Top section of the card: title, price, and extended feature list -->
             <div class="card-top">
+                <!-- Plan name -->
                 <h3 class="card-title">Pro</h3>
+
+                <!-- Price row with numeric value and period label -->
                 <p class="card-price">
                     <span class="card-price-amount">$20</span>
                     <span class="card-price-period">/mo.</span>
                 </p>
+
+                <!-- Content area describing what is added on top of Hobby -->
                 <div class="card-content">
+                    <!-- Section label explaining this list builds on Hobby features -->
                     <p class="includes-text">Everything in Hobby, plus:</p>
+
+                    <!-- Feature list: highlights Pro‑only benefits -->
                     <ul class="features-list">
                         <li>
                             <span class="checkmark">✓</span>
@@ -67,7 +103,52 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- Primary call-to-action button for upgrading to Pro -->
             <button class="download-button primary">Get Pro</button>
+        </div>
+
+        <!-- Enterprise plan card (right card) -->
+        <div class="card">
+            <!-- Top section of the card: title, price, and enterprise feature list -->
+            <div class="card-top">
+                <!-- Plan name -->
+                <h3 class="card-title">Enterprise</h3>
+
+                <!-- Price row: placeholder for custom / high-touch pricing -->
+                <p class="card-price">
+                    <span class="card-price-amount">Contact us</span>
+                </p>
+
+                <!-- Content area describing enterprise-level additions -->
+                <div class="card-content">
+                    <!-- Section label explaining this builds on Pro features -->
+                    <p class="includes-text">Everything in Pro, plus:</p>
+
+                    <!-- Feature list: enterprise‑only benefits -->
+                    <ul class="features-list">
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Dedicated success manager
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Advanced security & compliance
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Custom onboarding & training
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Priority support SLAs
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Call-to-action button for starting an enterprise conversation -->
+            <button class="download-button primary">Talk to sales</button>
         </div>
     </div>
 </body>
